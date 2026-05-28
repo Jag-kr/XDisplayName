@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1>Display Your Name</h1>
+      <h1>Full Name Display</h1>
       
       <div className="form-container">
         {!submitted ? (
@@ -35,6 +35,7 @@ function App() {
                 onChange={(e) => setFirstName(e.target.value)}
                 placeholder="Enter your first name"
                 className="input-field"
+                required
               />
             </div>
 
@@ -47,13 +48,13 @@ function App() {
                 onChange={(e) => setLastName(e.target.value)}
                 placeholder="Enter your last name"
                 className="input-field"
+                required
               />
             </div>
 
             <button
               type="submit"
               className="submit-button"
-              disabled={!firstName.trim() || !lastName.trim()}
             >
               Submit
             </button>
